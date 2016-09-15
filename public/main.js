@@ -2,9 +2,34 @@
 
 let userData = {};
 
-function filter (str, rules = ['КЕК']) {
-	return `//TODO: реализовать filter`;
+/*function filter(str, rules = ['MATH', 'yahoo']) {
+
+	let pos = 0;
+	for ( i = 0; i < rules.length; ++i ){
+		let first = '*';
+		first = first.repeat(rules[i].length);
+		str = str.replace(new RegExp(rules[i],'g'), first);
+	}
+	return str;
 }
+*/
+
+function filter(str, rules = ['MATH', 'yahoo']) {
+
+	rules = rules.map(rule => {
+		return {
+			regexp: new RegExp(`\\b${rule}\\b`, 'g'),
+			length: rule.length
+		};
+	});
+
+	rules.forEach((rule) => {
+		str = str.replace(rule.regexp, (new Array(rule.length + 1)).join('*'))
+	});
+
+	return str;
+}
+
 
 function onLogin (form, block) {
 	userData = {

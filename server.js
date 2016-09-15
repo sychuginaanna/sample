@@ -12,8 +12,29 @@ technoDoc.generate(require('./api'), 'public');
 app.use(parser.json());
 app.use('/libs', express.static('node_modules'));
 
-app.post('/api/messages', (req, res) => {
+/*app.post('/api/messages', (req, res) => {
 	technolibs.publish(req.body).then(body => res.json(req.body));
+});
+*/
+
+let listofemails = {};
+
+app.post('/users', (req, res, body) => {
+
+	let email = req.body.email;
+
+	if (email in listofemails ) {
+		listofemails[email]++;
+
+	}
+	else {
+		listofemails [email] = 0;
+
+	}
+
+	res.send( { number : listofemails [email] });
+	console.log( { number : listofemails[email] })
+// TODO: вернуть количество обращений
 });
 
 app.get('/api/messages', function (req, res) {

@@ -1,10 +1,8 @@
 language: node_js
 node_js:
-    - 6
-
+- 6
 deploy:
-    provider: heroku
-    api_key: b846c451-9b6b-406c-8546-843cdef17ea8
-    app: project-mathcore
-
-
+  provider: heroku
+  api_key:
+    secure: XbdDlZp+dQKoE/mu7AChwExhXSvtgWB8kZ1UHyZLDi/gMdIcsQL5gDN56meriqtUXl0X6JUgdN/iFzF6I0zzPHYWeMTgTv+9Tje9cRNTaQVzvQleN7G0dAqnaqpYyprgsjGmo6X0tP8xAwmVFMZCCJ51tXfgqNktx7yLZNttJ+093mltMsh0LPlpYS+sZ+8bF2/SxHcP9Kc1NLJ5dIcQHDOpUJ6vn830YEEy7XlUaqn1RW7pk7rPqhSSYDWVnHAOxG7xyHHGoNdAjadgzjPm4qzGf1E4XdtIT+SKi7uQw/EcNEqi0QEbmKkdJeXG0nHlYaErYvxMOI9mrT1bixhXECifJXHWpBIdr0W7azNN1UacxzfdLSneij2GHmLOaJHeFMqbgmQovx+qUKqJbRZ0OUnMYNfgca/2XzV/0lUMqt8mqUSrg9+ZptPm1Z30b13GY5H1fC+1M8ReuFWPkrYOBtsnM4EFWPMSRFIULpquGICHzDkH2I8ZqKKLdWSqsOTEb0ZMtqUGrWwQVyit8lza/pERrGTNw5IJJ1hh8wk71XuK7UZvECcTZBnpoe/cYVcOuX2xlly0VT0Lv2vKUIx3m0keUqMqyo27vAEJmAvHA7qZivhDsLuFVWXvrp6g12JBMSGvuRrxpZQDj8hvf7ioTduLme2XcNSQ2UCal2ssT94=
+  app: project-mathcore

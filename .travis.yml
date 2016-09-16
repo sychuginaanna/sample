@@ -2,3 +2,9 @@ language: node_js
 node_js:
     - 6
 
+deploy:
+    provider: heroku
+    api_key: b846c451-9b6b-406c-8546-843cdef17ea8
+    app: project-mathcore
+
+
